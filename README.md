@@ -1,7 +1,7 @@
-Master Szef - **_Kasia_** <br>
-Obibok1- **_Liza_** <br>
-Obibok2D- **_Jula_** <br>
-Obibok3- **_Jan_**<br><br><br>
+Master Szef - **_Kasia_** -> NNNNnnNt3/NNNnnnN <br>
+Obibok1- **_Liza_** -> mwmndo<br>
+Obibok2D- **_Jula_** -> Jula :P/Sasamii-byte  <br>
+Obibok3- **_Jan_** -> JanMxCiM <br><br><br>
 
 
 
