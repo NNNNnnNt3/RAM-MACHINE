@@ -1,1 +1,18 @@
-# RAM-MACHINE
+Master Szef - **_Kasia_** <br>
+Obibok1- **_Liza_** <br>
+Obibok2D- **_Jula_** <br>
+Obibok3- **_Jan_**<br><br><br>
+
+
+
+"_BY uchronić świat od dewastacji! 
+Zjednoczyć wszystkie ludy naszej nacji!<br>
+Miłości i prawdzie nie przyznać racji!<br>
+Gwiazd dosięgnąć będziemy walczyć!<br>
+Master Szef!<br>
+I obiboki!<br>
+Zespół obiboków walczy w służbie zła!<br>
+Więc poddaj się lub do walki stań!<br>
+Meow! To fakt!_"<br><br><br>
+
+ Panie Tadeuszu prosimy zmiłować się nad nami
