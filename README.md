@@ -5,7 +5,7 @@ Obibok3- **_Jan_**<br><br><br>
 
 
 
-"_BY uchronić świat od dewastacji! 
+"_By uchronić świat od dewastacji! 
 Zjednoczyć wszystkie ludy naszej nacji!<br>
 Miłości i prawdzie nie przyznać racji!<br>
 Gwiazd dosięgnąć będziemy walczyć!<br>
