@@ -17,4 +17,4 @@ Zespół obiboków walczy w służbie zła!<br>
 Więc poddaj się lub do walki stań!<br>
 Meow! To fakt!_"<br><br><br>
 
- Panie Tadeuszu prosimy zmiłować się nad nami 🙏
+ Panie Tadeuszu prosimy zlitować się nad nami 🙏
