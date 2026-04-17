@@ -1,1 +1,20 @@
+Kolory użyte na stronie:
 
+kolorystyka-> matcha
+
+
+PARCHMENT
+  HEX: #f7efda
+  RGB: 247, 239, 218
+
+PISTACHIO
+  HEX: #badd7f
+  RGB: 186, 221, 127
+
+MELON
+  HEX: #efaca5
+  RGB: 239, 172, 165
+
+FERN GREEN
+  HEX: #3e8440
+  RGB: 62, 132, 64
