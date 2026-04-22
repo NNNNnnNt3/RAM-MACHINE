@@ -1,4 +1,4 @@
-podział pracy:
-HTML -> Jula Stadler (Jula :P/Sasamii-byte)
-CSS -> Liza Agapova (mwmndo)
-JavaScript -> Kasia Musztyfaga (NNNNnnNt3/NNNnnnN), Jan Marzec (JanMxCiM)
+podział pracy:<br>
+HTML -> Jula Stadler (Jula :P/Sasamii-byte)<br>
+CSS -> Liza Agapova (mwmndo)<br>
+JavaScript -> Kasia Musztyfaga (NNNNnnNt3/NNNnnnN), Jan Marzec (JanMxCiM)<br>
