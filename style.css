@@ -1,10 +1,7 @@
-* {
-  font-family: Arial, Helvetica, sans-serif;
-}
-:root{
-  --tło_strony: #ffffff;
-  --tekst_podstawowy: #333333;
-  --tło_nagłówka_i_stopki_oraz_obramowanie_miniatury: #c8102e;
-  --tło_panelu_bocznego: #f4f4f4;
-  --tekst_nagłówka_i_stopki: #ffffff;
-}
+/*
+KOLORY W PROJEKCIE
+1. PARCHMENT - #F7EFDA - rgb(247, 239, 218)
+2. PISTACHIO - #BADD7F - rgb(186, 221, 127)
+3. MELON - #EFACA5 - rgb(239, 172, 165)
+4. FERN GREEN - #3E8440 - rgb(62, 132, 64)
+*/
