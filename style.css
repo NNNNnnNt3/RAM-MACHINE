@@ -72,3 +72,11 @@ h2 {
 .order-summary p {
   font-size: 0.9rem;
 }
+
+.cells-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
