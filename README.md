@@ -14,6 +14,10 @@ Obibok2D- **_Jula Stadler_** -> Jula :P/Sasamii-byte  <br>
 Obibok3- **_Jan Marzec_** -> JanMxCiM <br><br><br>
 
 
+Są 2 branches:<br>
+- main (pliki do strony nie zaśmiecone)<br>
+- info (dla obiboków z informacjiami któe będą nam pomocne)<br>
+<br><br><br>
 
 "_By uchronić świat od dewastacji! <br>
 Zjednoczyć wszystkie ludy naszej nacji!<br>
