@@ -1,7 +1,10 @@
 ## Jeżeli jesteś poza tematu to wiedz że jesteś winny 20zł blikiem!!!<br>
 <br>
 <br>
-LINK do strony: https://nnnnnnnt3.github.io/RAM-MACHINE/ <br>
+
+
+
+LINK do strony: https://nnnnnnnt3.github.io/RAM-MACHINE/ <br><br>
 
 
 
