@@ -26,7 +26,7 @@ __Kontrolka taśmy wejściowej i wyjściowej:__ <br>
 -  tak jak w przypadku przycisków na kontrolce pamięci, dłuższe przyciniącie przycisku spowoduje przewijanie o większą
 liczbę komórek, aż do momentu zwolnienia przycisku.<br>
 - podczas instrukcji READ i WRITE strzałka się przesuwa na komókęna któej wykonuje się operacja<br>
-
+<br><br>
 
 __Animacje:__<br>
 
@@ -36,7 +36,7 @@ __Elementy które działaja równo że sobą:__<br>
 - kontrola procesora i kontrola pamięci jeżeli program działa w kontroli procesora ma pokazane które aktualnie robione i w kontroli pamięci też pokazuje które się robi<br>
 
 
-
+<br><br>
 
 
 __JavaScript:__ <br>
