@@ -1,6 +1,9 @@
 nie zgadzam się<br>
 LINK do strony: https://nnnnnnnt3.github.io/RAM-MACHINE/ <br>
 
+# Tytuł 1
+## tyt 2
+
 Master Szef - **_Kasia Musztyfaga_** -> NNNNnnNt3/NNNnnnN <br>
 Obibok1- **_Liza Agapova_** -> mwmndo<br>
 Obibok2D- **_Jula Stadler_** -> Jula :P/Sasamii-byte  <br>
