@@ -5,14 +5,9 @@ Obibok3- **_Jan_** -> JanMxCiM <br><br><br>
 
 
 
-"_By uchronić świat od dewastacji! <br>
-Zjednoczyć wszystkie ludy naszej nacji!<br>
-Miłości i prawdzie nie przyznać racji!<br>
-Gwiazd dosięgnąć będziemy walczyć!<br>
-Master Szef!<br>
-I obiboki!<br>
-Zespół obiboków walczy w służbie zła!<br>
-Więc poddaj się lub do walki stań!<br>
-Meow! To fakt!_"<br><br><br>
-
- Panie Tadeuszu prosimy zmiłować się nad nami
+ściągawka.txt -> wypisywanie ważnych id na stornie i innych
+zasada działania.md -> jak ma działać ram machine dnae z magisterki
+shere.txt -> linki do szybkiego udostępniania
+notatki.md -> większe notatki które mają działać
+kolorystyka.txt -> rozpiska kolorów
+colorscheme.png - > zdjęcie z zestwieniem kolorów
