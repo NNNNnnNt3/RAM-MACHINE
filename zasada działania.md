@@ -19,6 +19,9 @@ __Kontrolka pamięci:__<br>
 
 <br><br>
 
+__Kontrolka tamy wejściowej i wyjściowej:__ <br>
+- możliwość tylko wprowadzenia do taśmy wejściowej
+- wprowadzenie do taśmy wyjściowej ma tylko program
 
 __Animacje:__<br>
 
