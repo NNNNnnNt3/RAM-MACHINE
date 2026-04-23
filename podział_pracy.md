@@ -8,20 +8,20 @@ Illustrator -> Jula Stadler (Jula :P/Sasamii-byte)<br>
 
 
 
-_Dokładniejszy wykaz pracy:_
+_***Dokładniejszy wykaz pracy:***_
 <br><br><br>
-Liza Agapova (mwmndo):<br>
+***Liza Agapova (mwmndo):***<br>
 - css całego projektu
 
 <br><br>
-Jula Stadler (Jula :P/Sasamii-byte):<br>
+***Jula Stadler (Jula :P/Sasamii-byte):***<br>
 - ilustracjie<br>
 - html strony<br>
 <br><br>
-Jan Marzec (JanMxCiM):<br>
+***Jan Marzec (JanMxCiM):***<br>
 - java script<br>
 <br><br>
 
-Kasia Musztyfaga (NNNNnnNt3/NNNnnnN):<br>
-- próba nie uduszenia janka który nie rozumie tłumaczenia po raz 3<br>
+***Kasia Musztyfaga (NNNNnnNt3/NNNnnnN):***<br>
+- próba nie uduszenia Janka który nie rozumie tłumaczenia po raz 3<br>
 - java script <br>
