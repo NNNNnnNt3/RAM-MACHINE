@@ -30,3 +30,6 @@ Więc poddaj się lub do walki stań!<br>
 Meow! To fakt!_"<br><br><br>
 
  Panie Tadeuszu prosimy zlitować się nad nami 🙏
+
+
+Działamy w systemie: "I'm a Survivor" Reba McEntire 🎵
