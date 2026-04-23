@@ -1,4 +1,5 @@
 nie zgadzam się<br>
+proszęo zaprzestanie !!!!!<br>
 LINK do strony: https://nnnnnnnt3.github.io/RAM-MACHINE/ <br>
 
 Master Szef - **_Kasia Musztyfaga_** -> NNNNnnNt3/NNNnnnN <br>
