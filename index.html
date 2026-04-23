@@ -1,19 +1,84 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekt</title>
-    <script src="skrypt.js" defer></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  test
-  testtesttesttesttesttesttesttesttesttesttest
-  testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest
-  dfgsdgsgsdgsgs<br>
-  test z vsc
-  <br><br>
-  testowanie z dev w url
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Project — RAM Machine</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Project — RAM Machine</h1>
+    </header>
+
+    <main>
+      <!-- 1: Input devices / data wejściowe -->
+      <section id="input-data" aria-labelledby="input-heading">
+        <h2 id="input-heading">Order Input</h2>
+        <p>Enter an order number to look up or process.</p>
+        <form id="order-form" action="#" method="get">
+          <label for="order-number">Order number</label>
+          <input type="text" id="order-number" name="order-number" inputmode="numeric" pattern="[0-9]*" placeholder="e.g., 42" required>
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+
+      <!-- 2: Memory / Order kiosk (zamówienie) -->
+      <section id="order-kiosk" aria-labelledby="order-heading">
+        <h2 id="order-heading">Order / Memory</h2>
+        <p>Kiosk interface — area for the order screen.</p>
+        <div class="kiosk-screen" role="region" aria-label="Order screen">
+          <!-- placeholder content for UI -->
+          <strong>In kiosk: order preview</strong>
+          <div class="order-summary">
+            <p>Pizza: Margherita</p>
+            <p>Quantity: 1</p>
+            <p>Order no.: 42</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3: Registers / memory cells (the numbered boxes) -->
+      <section id="memory-cells" aria-labelledby="cells-heading">
+        <h2 id="cells-heading">Memory — cells / registers</h2>
+        <p>Memory cells (1..4) — place for input values and parameters.</p>
+        <ol class="cells-list">
+          <li class="cell" data-id="1">Cell 1: <span class="value">--</span></li>
+          <li class="cell" data-id="2">Cell 2: <span class="value">--</span></li>
+          <li class="cell" data-id="3">Cell 3: <span class="value">--</span></li>
+          <li class="cell" data-id="4">Cell 4: <span class="value">--</span></li>
+        </ol>
+      </section>
+
+      <!-- 4: Program editor / pizzorator3000 panel (left block) -->
+      <section id="program-editor" aria-labelledby="program-heading">
+        <h2 id="program-heading">Program / Chef Panel</h2>
+        <p>Place for the program that will be executed by the ALU.</p>
+        <p class="chef-note">heres what our chef told</p>
+        <pre class="program-sample">// program goes here (removed test program)</pre>
+      </section>
+
+      <!-- 5: ALU / CPU (central box) -->
+      <section id="alu" aria-labelledby="alu-heading">
+        <h2 id="alu-heading">ALU / CPU</h2>
+        <p>Centralna jednostka wykonawcza — łączy pamięć, program i wyjścia.</p>
+        <div class="alu-box">ALU (tu będą operacje)</div>
+      </section>
+
+      <!-- 6: Output / pizza boxes -->
+      <section id="output" aria-labelledby="output-heading">
+        <h2 id="output-heading">Output Data — Pizza Boxes</h2>
+        <p>Output boxes in the queue for pickup:</p>
+        <div class="output-row">
+          <div class="box" data-box="1">Box 1</div>
+          <div class="box" data-box="2">Box 2</div>
+          <div class="box" data-box="3">Box 3</div>
+          <div class="box" data-box="4">Box 4</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+    </footer>
+  </body>
 </html>
