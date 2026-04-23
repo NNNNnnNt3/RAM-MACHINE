@@ -23,5 +23,4 @@ _***Dokładniejszy wykaz pracy:***_
 <br><br>
 
 ***Kasia Musztyfaga (NNNNnnNt3/NNNnnnN):***<br>
-- próba nie uduszenia Janka który nie rozumie tłumaczenia po raz 3<br>
 - java script <br>
