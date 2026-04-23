@@ -25,4 +25,4 @@ __Animacje:__<br>
 <br><br>
 
 __Elementy które działaja równo że sobą:__<br>
-Kontrola procesora i kontrola pamięci jeżeli program działa w kontroli procesora ma pokazane które aktualnie robione i w kontroli pamięci też pokazuje które się robi<br>
+- kontrola procesora i kontrola pamięci jeżeli program działa w kontroli procesora ma pokazane które aktualnie robione i w kontroli pamięci też pokazuje które się robi<br>
