@@ -5,3 +5,9 @@ KOLORY W PROJEKCIE
 3. MELON - #EFACA5 - rgb(239, 172, 165)
 4. FERN GREEN - #3E8440 - rgb(62, 132, 64)
 */
+:root {
+  --parchment: #f7efda;
+  --pistachio: #badd7f;
+  --melon: #efaca5;
+  --fern-green: #3e8400;
+}
