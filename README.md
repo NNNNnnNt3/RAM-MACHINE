@@ -16,7 +16,7 @@ Obibok3- **_Jan Marzec_** -> JanMxCiM <br><br><br>
 
 Są 2 branches:<br>
 - main (pliki do strony nie zaśmiecone)<br>
-- info (dla obiboków z informacjiami któe będą nam pomocne)<br>
+- info (dla obiboków z informacjiami które będą nam pomocne)<br>
 <br><br><br>
 
 "_By uchronić świat od dewastacji! <br>
