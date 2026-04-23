@@ -1,4 +1,6 @@
-Jeżeli jesteś poza tematu to wiedz że jesteś winny 20zł blikiem!!!<br>
+# Jeżeli jesteś poza tematu to wiedz że jesteś winny 20zł blikiem!!!<br>
+<br>
+<br>
 LINK do strony: https://nnnnnnnt3.github.io/RAM-MACHINE/ <br>
 
 Master Szef - **_Kasia Musztyfaga_** -> NNNNnnNt3/NNNnnnN <br>
