@@ -5,7 +5,7 @@ Obibok3- **_Jan_** -> JanMxCiM <br><br><br>
 
 
 
-"_By uchronić świat od dewastacji! 
+"_By uchronić świat od dewastacji! <br>
 Zjednoczyć wszystkie ludy naszej nacji!<br>
 Miłości i prawdzie nie przyznać racji!<br>
 Gwiazd dosięgnąć będziemy walczyć!<br>
