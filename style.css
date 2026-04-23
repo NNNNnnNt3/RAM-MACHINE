@@ -11,3 +11,26 @@ KOLORY W PROJEKCIE
   --melon: #efaca5;
   --fern-green: #3e8400;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial,sans-serif;
+  line-height: 1.5;
+}
+
+header{
+  padding: 1rem;
+  text-align: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
