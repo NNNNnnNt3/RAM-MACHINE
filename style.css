@@ -63,3 +63,12 @@ h2 {
   cursor: pointer;
 }
 
+.kiosk-screen {
+  margin-top: 0.5rem;
+  padding: 0.8rem;
+  border-radius: 6px;
+}
+
+.order-summary p {
+  font-size: 0.9rem;
+}
