@@ -20,7 +20,7 @@ _***Dokładniejszy wykaz pracy:***_
 
 <br><br>
 ***Jan Marzec (JanMxCiM):***<br>
-- java script -> tabela/program, processor <br>
+- java script -> program, processor <br>
 - animacje <br>
 <br><br>
 
