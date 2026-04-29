@@ -12,7 +12,7 @@ _***Dokładniejszy wykaz pracy:***_
 <br><br><br>
 ***Liza Agapova (mwmndo):***<br>
 - css całego projektu<br>
-- przyciski w java script
+- przyciski i strzałki w java script
 
 <br><br>
 ***Jula Stadler (Jula :P/Sasamii-byte):***<br>
