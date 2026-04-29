@@ -21,8 +21,8 @@ _***Dokładniejszy wykaz pracy:***_
 - animacje <br>
 <br><br>
 ***Jan Marzec (JanMxCiM):***<br>
-- java script (reszta javascriptu do puźniejszego podziału)<br>
+- java script (reszta javascriptu do puźniejszego podziału po dokładniejszym przeanalizowaniu dokumentacji)<br>
 <br><br>
 
 ***Kasia Musztyfaga (NNNNnnNt3/NNNnnnN):***<br>
-- java script (reszta javascriptu do puźniejszego podziału)<br>
+- java script (reszta javascriptu do puźniejszego podziału po dokładniejszym przeanalizowaniu dokumentacji)<br>
