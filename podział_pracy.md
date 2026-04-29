@@ -26,3 +26,4 @@ _***Dokładniejszy wykaz pracy:***_
 
 ***Kasia Musztyfaga (NNNNnnNt3/NNNnnnN):***<br>
 - java script (reszta javascriptu do puźniejszego podziału po dokładniejszym przeanalizowaniu dokumentacji)<br>
+- nazorowanie projektu
