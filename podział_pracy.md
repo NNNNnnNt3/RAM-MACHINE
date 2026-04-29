@@ -18,12 +18,14 @@ _***Dokładniejszy wykaz pracy:***_
 ***Jula Stadler (Jula :P/Sasamii-byte):***<br>
 - ilustracjie<br>
 - html strony<br>
-- animacje <br>
+
 <br><br>
 ***Jan Marzec (JanMxCiM):***<br>
-- java script (reszta javascriptu do puźniejszego podziału po dokładniejszym przeanalizowaniu dokumentacji)<br>
+- java script -> tabela/program, processor <br>
+- animacje <br>
 <br><br>
 
 ***Kasia Musztyfaga (NNNNnnNt3/NNNnnnN):***<br>
-- java script (reszta javascriptu do puźniejszego podziału po dokładniejszym przeanalizowaniu dokumentacji)<br>
-- nazorowanie projektu
+- java script -> memory, kontrolka taśmy wejściowej i wyjściowej<br>
+- nazorowanie projektu<br>
+
