@@ -18,7 +18,7 @@ _***Dokładniejszy wykaz pracy:***_
 ***Jula Stadler (Jula :P/Sasamii-byte):***<br>
 - ilustracjie<br>
 - html strony<br>
-- animacje html <br>
+- animacje <br>
 <br><br>
 ***Jan Marzec (JanMxCiM):***<br>
 - java script (dokładnie puźniej)<br>
