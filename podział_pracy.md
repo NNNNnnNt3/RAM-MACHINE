@@ -11,16 +11,18 @@ Illustrator -> Jula Stadler (Jula :P/Sasamii-byte)<br>
 _***Dokładniejszy wykaz pracy:***_
 <br><br><br>
 ***Liza Agapova (mwmndo):***<br>
-- css całego projektu
+- css całego projektu<br>
+- przyciski w java script
 
 <br><br>
 ***Jula Stadler (Jula :P/Sasamii-byte):***<br>
 - ilustracjie<br>
 - html strony<br>
+- animacje html <br>
 <br><br>
 ***Jan Marzec (JanMxCiM):***<br>
-- java script<br>
+- java script (dokładnie puźniej)<br>
 <br><br>
 
 ***Kasia Musztyfaga (NNNNnnNt3/NNNnnnN):***<br>
-- java script <br>
+- java script (dokładnie puźniej)<br>
