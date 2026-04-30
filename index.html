@@ -1,84 +1,138 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Project — RAM Machine</title>
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <header>
-      <h1>Project — RAM Machine</h1>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pizzeria RAM Machine</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="toolbar">
 
-    <main>
-      <!-- 1: Input devices / data wejściowe -->
-      <section id="input-data" aria-labelledby="input-heading">
-        <h2 id="input-heading">Order Input</h2>
-        <p>Enter an order number to look up or process.</p>
-        <form id="order-form" action="#" method="get">
-          <label for="order-number">Order number</label>
-          <input type="text" id="order-number" name="order-number" inputmode="numeric" pattern="[0-9]*" placeholder="e.g., 42" required>
-          <button type="submit">Submit</button>
-        </form>
-      </section>
+      <button class="btn green" id="run">▶</button>
+      <button class="btn" id="step">⏭</button>
+      <button class="btn red" id="stop">■</button>
+      <button class="btn" id="reset">↻</button>
 
-      <!-- 2: Memory / Order kiosk (zamówienie) -->
-      <section id="order-kiosk" aria-labelledby="order-heading">
-        <h2 id="order-heading">Order / Memory</h2>
-        <p>Kiosk interface — area for the order screen.</p>
-        <div class="kiosk-screen" role="region" aria-label="Order screen">
-          <!-- placeholder content for UI -->
-          <strong>In kiosk: order preview</strong>
-          <div class="order-summary">
-            <p>Pizza: Margherita</p>
-            <p>Quantity: 1</p>
-            <p>Order no.: 42</p>
+      <label>Prędkość 
+        <input class="speed" id="speed" type="range" min="50" max="1200" value="350">
+      </label>
+      
+      <button class="btn" id="addRow">+ wiersz</button>
+      <button class="btn" id="sample">Przykład: suma</button>
+      
+      <span class="hint">
+        Instrukcje: LOAD STORE ADD SUB MULT DIV READ WRITE JUMP JGTZ JZERO HALT
+      </span>
+
+    </div>
+    
+    <div class="tape inputTape tape" id="inputTape">
+      <div>
+        <button class="btn small" data-tape="in" data-act="home">|◀</button> 
+        <button class="btn small" data-tape="in" data-act="left">◀</button>
+        <div class="tapeTitle">Taśma wejściowa</div>
+      </div>
+
+      <div class="tapeCells"></div>
+      
+      <button class="btn small" data-tape="in" data-act="right">▶</button>
+      
+      <div class="head"></div>
+
+    </div>
+
+    <div class="main">
+
+      <div class="left">
+
+        <div class="panel processor">
+
+          <h3>Processor</h3>
+
+          <div class="row">
+            <b>Instruction:</b>
+            <div class="display" id="pInstr"></div>
+          </div>
+
+          <div class="row">
+            <b>Argument:</b>
+            <div class="display" id="pArg"></div>
+          </div>
+
+        </div>
+
+        <div class="panel memory">
+          <h3>Memory</h3>
+            <div class="memBody"><table class="memTable">
+              <thead>
+                <tr>
+                  <th>Address</th>
+                  <th>Value</th>
+                </tr>
+              </thead>
+
+              <tbody id="memRows"></tbody>
+            
+              </table>
+          
+            </div>
+        
+          <div class="memNav">
+            <button class="btn" data-mem="up">▲</button>
+            <button class="btn" id="showAddr">Show Address…</button>
+            <button class="btn" data-mem="down">▼</button>
           </div>
         </div>
-      </section>
+      </div>
+      
+      <div class="panel program">
+        <h3>Program</h3>
+        <div class="progWrap">
+          <table class="progTable">
+            <thead>
+              <tr>
+                <th>LN</th>
+                <th>Label</th>
+                <th>Instruction</th>
+                <th>Argument</th>
+                <th>Comment</th>
+                <th>EC</th>
+                <th>EP</th>
+              </tr>
+            </thead>
 
-      <!-- 3: Registers / memory cells (the numbered boxes) -->
-      <section id="memory-cells" aria-labelledby="cells-heading">
-        <h2 id="cells-heading">Memory — cells / registers</h2>
-        <p>Memory cells (1..4) — place for input values and parameters.</p>
-        <ol class="cells-list">
-          <li class="cell" data-id="1">Cell 1: <span class="value">--</span></li>
-          <li class="cell" data-id="2">Cell 2: <span class="value">--</span></li>
-          <li class="cell" data-id="3">Cell 3: <span class="value">--</span></li>
-          <li class="cell" data-id="4">Cell 4: <span class="value">--</span></li>
-        </ol>
-      </section>
-
-      <!-- 4: Program editor / pizzorator3000 panel (left block) -->
-      <section id="program-editor" aria-labelledby="program-heading">
-        <h2 id="program-heading">Program / Chef Panel</h2>
-        <p>Place for the program that will be executed by the ALU.</p>
-        <p class="chef-note">heres what our chef told</p>
-        <pre class="program-sample">// program goes here (removed test program)</pre>
-      </section>
-
-      <!-- 5: ALU / CPU (central box) -->
-      <section id="alu" aria-labelledby="alu-heading">
-        <h2 id="alu-heading">ALU / CPU</h2>
-        <p>Centralna jednostka wykonawcza — łączy pamięć, program i wyjścia.</p>
-        <div class="alu-box">ALU (tu będą operacje)</div>
-      </section>
-
-      <!-- 6: Output / pizza boxes -->
-      <section id="output" aria-labelledby="output-heading">
-        <h2 id="output-heading">Output Data — Pizza Boxes</h2>
-        <p>Output boxes in the queue for pickup:</p>
-        <div class="output-row">
-          <div class="box" data-box="1">Box 1</div>
-          <div class="box" data-box="2">Box 2</div>
-          <div class="box" data-box="3">Box 3</div>
-          <div class="box" data-box="4">Box 4</div>
+            <tbody id="progRows"></tbody>
+          </table>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
 
-    <footer>
-    </footer>
-  </body>
+    <div class="tape outputTape tape" id="outputTape">
+      <div>
+        <button class="btn small" data-tape="out" data-act="home">|◀</button> 
+        <button class="btn small" data-tape="out" data-act="left">◀</button>
+        
+        <div class="tapeTitle">Taśma wyjściowa</div>
+      </div>
+
+      <div class="tapeCells"></div>
+      <button class="btn small" data-tape="out" data-act="right">▶</button>
+      <div class="head"></div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div>
+      <h3>Show Address…</h3>
+      <input id="addrInput" type="number" min="0" step="1" placeholder="Adres komórki">
+      <button class="btn green" id="goAddr">Go!</button> 
+      <button class="btn" id="closeModal">Anuluj</button>
+    </div>
+  </div>
+  
+  <div class="log" id="log">Gotowe.</div>
+
+</body>
 </html>
