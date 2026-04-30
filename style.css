@@ -1,57 +1,37 @@
-/* 🟫 TABLES — wider + shorter */
-#gora, #dol {
+
+html { height: 100%; }
+body {
+  width: 2000px;
+  height: 1500px;
+  margin: 0;
+  position: relative; 
+  overflow: hidden;   
+  background: #ffffff;
+}
+
+#piec {
   position: absolute;
-  width: 650px;     /* wider */
-  height: 80px;     /* shorter */
-  left: 50%;
-  transform: translateX(-50%);
+
+}
+#conveyor {
+  position: absolute;
+}
+
+#memory {
+  position: absolute;
+
 }
 
 #gora {
-  top: 60px;
-}
-
-#dol {
-  top: 520px;  /* fixed instead of bottom */
-}
-
-/* 🔗 CONVEYOR — bigger & fixed */
-#conveyor {
   position: absolute;
-  width: 180px;   /* thicker */
-  height: 360px;  /* fixed height */
-  left: 50%;
-  top: 140px;     /* starts under top table */
-  transform: translateX(-50%);
-  z-index: 1;
+
 }
 
-/* 🔥 OVEN — centered ON conveyor */
-#piec {
+
+#inputtape{
   position: absolute;
-  width: 170px;
   left: 50%;
-  top: 320px;   /* manually centered in conveyor */
-  transform: translate(-50%, -50%);
-  z-index: 3;
+  top: 250px;
 }
 
-/* 🍕 TAPES — sit nicely on tables */
-#inputTape {
-  position: absolute;
-  top: 75px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 500px;
-  z-index: 5;
-}
 
-#outputTape {
-  position: absolute;
-  top: 535px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 500px;
-  z-index: 5;
-}
-.btn.red { background: #efaca5; }
