@@ -1,6 +1,6 @@
 Podział pracy:<br>
-HTML -> Jula Stadler (Jula :P/Sasamii-byte)<br>
-CSS -> Liza Agapova (mwmndo)<br>
+CSS-> Jula Stadler (Jula :P/Sasamii-byte)<br>
+HTML -> Liza Agapova (mwmndo)<br>
 JavaScript -> Kasia Musztyfaga (NNNNnnNt3/NNNnnnN), Jan Marzec (JanMxCiM)<br>
 Illustrator -> Jula Stadler (Jula :P/Sasamii-byte)<br>
 
@@ -11,12 +11,12 @@ Illustrator -> Jula Stadler (Jula :P/Sasamii-byte)<br>
 _***Dokładniejszy wykaz pracy:***_
 <br><br><br>
 ***Liza Agapova (mwmndo):***<br>
-- css całego projektu<br>
+- html strony<br>
 
 <br><br>
 ***Jula Stadler (Jula :P/Sasamii-byte):***<br>
 - ilustracjie<br>
-- html strony<br>
+- css całego projektu<br>
 
 <br><br>
 ***Jan Marzec (JanMxCiM):***<br>
