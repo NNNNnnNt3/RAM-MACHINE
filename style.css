@@ -1,62 +1,55 @@
+
+/* BASE */
 body {
   background: #f7efda;
   overflow: hidden;
 }
 
-/* MAIN CONTAINER */
 .app {
   position: relative;
   width: 100vw;
   height: 100vh;
 }
 
-/* 🔥 OVEN = ACCUMULATOR */
+/* 🟫 TABLES (same size + aligned) */
+#gora, #dol {
+  position: absolute;
+  width: 420px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#gora {
+  top: 80px;
+}
+
+#dol {
+  bottom: 80px;
+}
+
+/* 🔗 CONVEYOR (connects tables exactly) */
+#conveyor {
+  position: absolute;
+  width: 120px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  /* THIS is the key part */
+  top: 160px;      /* just under top table */
+  bottom: 160px;   /* just above bottom table */
+}
+
+/* 🔥 OVEN (center of conveyor) */
 #piec {
   position: absolute;
-  width: 180px;
-  top: 50%;
+  width: 160px;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
   z-index: 3;
 }
 
-/* 🟫 TOP TABLE (INPUT) */
-#gora {
-  position: absolute;
-  width: 400px;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* 🟫 BOTTOM TABLE (OUTPUT) */
-#dol {
-  position: absolute;
-  width: 500px;
-  bottom: 60px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* 🔗 CONVEYOR (vertical connection) */
-#conveyor {
-  position: absolute;
-  width: 120px;
-  top: 180px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-/* 🧠 MEMORY IMAGE (RIGHT SIDE) */
-#memory {
-  position: absolute;
-  width: 220px;
-  right: 80px;
-  top: 220px;
-}
-
-/* 📥 INPUT TAPE ON TOP TABLE */
+/* 🍕 INPUT TAPE (on top table) */
 #inputTape {
   position: absolute;
   top: 110px;
@@ -66,41 +59,48 @@ body {
   z-index: 5;
 }
 
-/* 📤 OUTPUT TAPE ON BOTTOM TABLE */
+/* 📦 OUTPUT TAPE (on bottom table) */
 #outputTape {
   position: absolute;
-  bottom: 90px;
+  bottom: 110px;
   left: 50%;
   transform: translateX(-50%);
-  width: 350px;
+  width: 300px;
   z-index: 5;
 }
 
-/* 📦 PROCESSOR (optional overlay on oven) */
+/* 🧠 PROCESSOR (LEFT = PIZZORATOR 3000) */
 .processor {
   position: absolute;
+  left: 60px;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(255,255,255,0.8);
-  border: 2px solid black;
-  padding: 6px;
-  z-index: 4;
+  transform: translateY(-50%);
+  width: 240px;
+  background: white;
+  border: 3px solid black;
+  padding: 10px;
 }
 
-/* 🧾 MEMORY PANEL (overlay ON memory image) */
+/* 🧾 MEMORY (RIGHT SIDE) */
+#memory {
+  position: absolute;
+  width: 240px;
+  right: 60px;
+  top: 200px;
+}
+
 .memory {
   position: absolute;
-  right: 90px;
-  top: 230px;
-  width: 200px;
-  height: 200px;
-  overflow: auto;
+  right: 70px;
+  top: 210px;
+  width: 220px;
+  height: 220px;
   background: rgba(255,255,255,0.85);
   border: 2px solid black;
+  overflow: auto;
 }
 
-/* BUTTONS (keep simple) */
+/* TOOLBAR */
 .toolbar {
   position: absolute;
   top: 10px;
