@@ -1,0 +1,64 @@
+.tape {
+    position: relative;
+    margin-top: 20px;
+  }
+
+  .tapeTitle {
+    margin: 10px 0;
+    font-weight: bold;
+  }
+
+  .tapeCells {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin: 10px 0;
+  }
+
+  .cell {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .btn {
+    padding: 5px 10px;
+    margin: 2px;
+    cursor: pointer;
+  }
+
+  .small {
+    font-size: 14px;
+  }
+
+  .head {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 40px;
+    height: 5px;
+    background: red;
+  }
+
+  .przeciaganie {
+  display: flex;
+  align-items: center; /* wyrównanie w pionie */
+  gap: 5px; /* odstępy między elementami */
+}
+
+.viewport {
+  width: 445px; /* 10 komórek (40px) + 9 gapów (5px) */
+  overflow: hidden;
+}
+
+.tapeCells {
+  display: flex;
+  gap: 5px;
+  transition: transform 0.3s ease;
+}
+
+

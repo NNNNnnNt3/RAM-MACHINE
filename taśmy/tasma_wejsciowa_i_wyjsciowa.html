@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pizzeria RAM Machine - tąma wyścia i wejścia</title>
+  <link rel="stylesheet" href="style-taśmy.css" />
+</head>
+<body>
+    <div class="tape inputTape tape" id="inputTape">
+    <div>
+        <div class="tapeTitle">Input tape</div>
+    </div>
+
+    <div class="przeciaganie">
+    <button class="btn small" id="homeBtn">|◀</button> 
+    <button class="btn small" id="leftBtn">◀</button>
+    
+    <div class="viewport">
+        <div class="tapeCells" id="tapeCells"></div>
+    </div>
+    
+    <button class="btn small" id="rightBtn">▶</button>
+    
+    <div class="head" id="head"></div>
+    </div>
+
+<script>
+const tapeCells = document.getElementById('tapeCells');
+const head = document.getElementById('head');
+
+let position = 0;
+let cells = [];
+
+function addCell(content = '') {
+  const cell = document.createElement('div');
+  cell.classList.add('cell');
+  cell.textContent = content;
+  tapeCells.appendChild(cell);
+  cells.push(cell);
+}
+
+for (let i = 0; i < 10; i++) {
+  addCell(i);
+}
+
+function updateHead() {
+  head.style.left = '0px'; 
+}
+
+function updateTape() {
+  const offset = position * 45; // 40px + 5px gap
+  tapeCells.style.transform = `translateX(-${offset}px)`;
+  updateHead();
+}
+
+// ▶
+document.getElementById('rightBtn').addEventListener('click', () => {
+  position++;
+
+  if (position + 10 > cells.length) {
+    addCell('');
+  }
+
+  updateTape();
+});
+
+// ◀
+document.getElementById('leftBtn').addEventListener('click', () => {
+  if (position > 0) {
+    position--;
+    updateTape();
+  }
+});
+
+// |◀
+document.getElementById('homeBtn').addEventListener('click', () => {
+  position = 0;
+  updateTape();
+});
+
+
+updateTape();
+</script>
+
+  
+</body>
+</html>
