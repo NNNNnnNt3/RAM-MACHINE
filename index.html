@@ -1,16 +1,17 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Pizzeria RAM Machine</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="index_files/styles.css">
 </head>
 <body>
-  <img src="piec.png" id="piec">
-  <img src="conv.png" id="conveyor">
-  <img src="stoliki gora.png" id="gora">
-   <img src="memo.png" id="memory">
+  
+  <img src="index_files/conv.png" id="conveyor">
+  <img src="index_files/piec.png" id="piec">
+  <img src="index_files/stoliki%20gora.png" id="gora">
+   <img src="index_files/memo.png" id="memory">
   <div class="app">
     <div class="toolbar">
 
@@ -24,7 +25,7 @@
 
     </div>
     
-    <div class="tape inputTape tape" id="inputTape">
+    <div class="tape inputTape tape" id="inputTape" style="position: absolute;left: 50%;top: 100px;">
       <div>
         <button class="btn small" data-tape="in" data-act="home">|◀</button> 
         <button class="btn small" data-tape="in" data-act="left">◀</button>
@@ -43,7 +44,7 @@
 
       <div class="left">
 
-        <div class="panel processor">
+        <div class="panel processor" style="position: absolute;">
 
           <h3>Processor</h3>
 
@@ -59,7 +60,7 @@
 
         </div>
 
-        <div class="panel memory">
+        <div class="panel memory" style="position: absolute;left: 1500px;color: white;top: 500px;">
           <h3>Memory</h3>
             <div class="memBody"><table class="memTable">
               <thead>
@@ -105,7 +106,7 @@
       </div>
     </div>
 
-    <div class="tape outputTape tape" id="outputTape">
+    <div class="tape outputTape tape" id="outputTape" style="position: absolute;left: 50%;top: 1500px;">
       <div>
         <button class="btn small" data-tape="out" data-act="home">|◀</button> 
         <button class="btn small" data-tape="out" data-act="left">◀</button>
@@ -128,5 +129,5 @@
     </div>
   </div>
   
-</body>
-</html>
+
+</body></html>
