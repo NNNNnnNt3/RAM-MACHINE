@@ -1,1 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Symulator Maszyny RAM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Symulator Maszyny RAM</h1>
+        
+        <div class="main-layout">
+            <div class="editor-section">
+                <div class="controls">
+                    <button onclick="runProgram()">Uruchom (F5)</button>
+                    <button onclick="stepProgram()">Krok (F6)</button>
+                    <button onclick="resetMachine()">Reset</button>
+                </div>
+                <textarea id="codeEditor" placeholder="Wpisz kod RAM tutaj... (np. READ 1)"></textarea>
+                <div id="status">Status: Gotowy</div>
+            </div>
 
+            <div class="state-section">
+                <div class="tape-box">
+                    <h3>Taśma Wejściowa</h3>
+                    <input type="text" id="inputTape" placeholder="Liczby oddzielone spacją">
+                </div>
+                
+                <div class="tape-box">
+                    <h3>Taśma Wyjściowa</h3>
+                    <div id="outputTape" class="tape-display"></div>
+                </div>
+
+                <div class="memory-box">
+                    <h3>Pamięć (Rejestry)</h3>
+                    <table id="memoryTable">
+                        <thead>
+                            <tr><th>Adres</th><th>Wartość</th></tr>
+                        </thead>
+                        <tbody>
+                            </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
