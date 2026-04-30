@@ -1,119 +1,57 @@
-
-/* BASE */
-body {
-  background: #f7efda;
-  overflow: hidden;
-}
-
-.app {
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-
-/* 🟫 TABLES (same size + aligned) */
+/* 🟫 TABLES — wider + shorter */
 #gora, #dol {
   position: absolute;
-  width: 420px;
+  width: 650px;     /* wider */
+  height: 80px;     /* shorter */
   left: 50%;
   transform: translateX(-50%);
 }
 
 #gora {
-  top: 80px;
+  top: 60px;
 }
 
 #dol {
-  bottom: 80px;
+  top: 520px;  /* fixed instead of bottom */
 }
 
-/* 🔗 CONVEYOR (connects tables exactly) */
+/* 🔗 CONVEYOR — bigger & fixed */
 #conveyor {
   position: absolute;
-  width: 120px;
+  width: 180px;   /* thicker */
+  height: 360px;  /* fixed height */
   left: 50%;
+  top: 140px;     /* starts under top table */
   transform: translateX(-50%);
-  
-  /* THIS is the key part */
-  top: 160px;      /* just under top table */
-  bottom: 160px;   /* just above bottom table */
+  z-index: 1;
 }
 
-/* 🔥 OVEN (center of conveyor) */
+/* 🔥 OVEN — centered ON conveyor */
 #piec {
   position: absolute;
-  width: 160px;
+  width: 170px;
   left: 50%;
-  top: 50%;
+  top: 320px;   /* manually centered in conveyor */
   transform: translate(-50%, -50%);
   z-index: 3;
 }
 
-/* 🍕 INPUT TAPE (on top table) */
+/* 🍕 TAPES — sit nicely on tables */
 #inputTape {
   position: absolute;
-  top: 110px;
+  top: 75px;
   left: 50%;
   transform: translateX(-50%);
-  width: 300px;
+  width: 500px;
   z-index: 5;
 }
 
-/* 📦 OUTPUT TAPE (on bottom table) */
 #outputTape {
   position: absolute;
-  bottom: 110px;
+  top: 535px;
   left: 50%;
   transform: translateX(-50%);
-  width: 300px;
+  width: 500px;
   z-index: 5;
 }
-
-/* 🧠 PROCESSOR (LEFT = PIZZORATOR 3000) */
-.processor {
-  position: absolute;
-  left: 60px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 240px;
-  background: white;
-  border: 3px solid black;
-  padding: 10px;
-}
-
-/* 🧾 MEMORY (RIGHT SIDE) */
-#memory {
-  position: absolute;
-  width: 240px;
-  right: 60px;
-  top: 200px;
-}
-
-.memory {
-  position: absolute;
-  right: 70px;
-  top: 210px;
-  width: 220px;
-  height: 220px;
-  background: rgba(255,255,255,0.85);
-  border: 2px solid black;
-  overflow: auto;
-}
-
-/* TOOLBAR */
-.toolbar {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 10;
-}
-
-.btn {
-  border: 2px solid black;
-  background: white;
-  padding: 5px 8px;
-  cursor: pointer;
-}
-
-.btn.green { background: #badd7f; }
 .btn.red { background: #efaca5; }
