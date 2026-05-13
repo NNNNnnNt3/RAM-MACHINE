@@ -1,7 +1,8 @@
 # 4CIM
 <br>
 <br>
-
+## Proszę o ponowne ocenienie podziału pracy
+<br>
 
 
 LINK do strony: https://nnnnnnnt3.github.io/RAM-MACHINE/ <br><br>
