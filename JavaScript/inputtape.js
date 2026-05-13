@@ -72,11 +72,15 @@ function renderTape(which){
 document.body.addEventListener('input', e => {
 
   if(e.target.dataset.tapein !== undefined){
+
     let i = +e.target.dataset.tapein;
+
     let v = e.target.value.trim();
 
     if(v === '' || isInt(v)){
+
       inTape[i] = v;
+
       console.log('Taśma wejściowa zapisana.');
 
     }else{
