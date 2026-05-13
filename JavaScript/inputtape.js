@@ -1,37 +1,167 @@
-  const cells = document.querySelectorAll('#inputTape .cell');
-  let activeIndex = 1;
-  
-  function updateActive() {
-    cells.forEach((cell, idx) => {
-      if (idx === activeIndex) {
-        cell.classList.add('active');
-      } else {
-        cell.classList.remove('active');
+let inTape = [];
+let inHead = 0;
+let inView = 0;
+
+const $ = s => document.querySelector(s);
+
+function isInt(s){
+  return /^-?\d+$/.test(String(s).trim())
+}
+
+function renderTape(which){
+
+  let root =
+    which === 'in'
+      ? $('#inputTape')
+      : $('#outputTape');
+
+  let view =
+    which === 'in'
+      ? inView
+      : outView;
+
+  let head =
+    which === 'in'
+      ? inHead
+      : outHead;
+
+  let arr =
+    which === 'in'
+      ? inTape
+      : outTape;
+
+  let cells = root.querySelector('.tapeCells');
+
+  cells.innerHTML = '';
+
+  for(let i=view; i<view+12; i++){
+
+    let div = document.createElement('div');
+
+    div.className =
+      'tcell ' + (which==='out' ? 'output' : '');
+
+    div.innerHTML =
+      `<span class="idx">${i+1}</span>` +
+
+      (
+        which === 'in'
+
+        ? `<input
+              data-tapein="${i}"
+              value="${arr[i] ?? ''}"
+           >`
+
+        : `<b style="line-height:44px">
+              ${arr[i] ?? ''}
+           </b>`
+      );
+
+    cells.appendChild(div);
+  }
+
+  let pos = 95 + (head - view) * 79 + 38;
+
+  root.querySelector('.head').style.left =
+    Math.max(
+      105,
+      Math.min(root.clientWidth - 60, pos)
+    ) + 'px';
+}
+
+document.body.addEventListener('input', e => {
+
+  if(e.target.dataset.tapein !== undefined){
+    let i = +e.target.dataset.tapein;
+    let v = e.target.value.trim();
+
+    if(v === '' || isInt(v)){
+      inTape[i] = v;
+      console.log('Taśma wejściowa zapisana.');
+
+    }else{
+
+      e.target.value = inTape[i] ?? '';
+
+      console.log(
+        'Do taśmy wejściowej wpisuj tylko liczby całkowite.'
+      );
+    }
+  }
+});
+
+function hold(btn, fn){
+
+  let id;
+
+  btn.onmousedown =
+  btn.ontouchstart = e => {
+
+    e.preventDefault();
+
+    fn();
+
+    id = setInterval(fn, 120);
+  };
+
+  [
+    'mouseup',
+    'mouseleave',
+    'touchend'
+  ].forEach(ev =>
+    btn.addEventListener(ev,
+      () => clearInterval(id)
+    )
+  );
+}
+
+document
+  .querySelectorAll('[data-tape]')
+  .forEach(b =>
+
+    hold(b, () => {
+
+      let t = b.dataset.tape;
+
+      let act = b.dataset.act;
+
+      if(t === 'in'){
+
+        if(act === 'home')
+          inView = 0;
+
+        if(act === 'left')
+          inView = Math.max(0, inView - 1);
+
+        if(act === 'right')
+          inView++;
+
+        renderTape('in');
       }
-    });
+    })
+  );
+
+function READ(address){
+
+  if(
+    inTape[inHead] === undefined ||
+    inTape[inHead] === ''
+  ){
+    throw 'Pusta komórka taśmy wejściowej.';
   }
-  
-  function moveLeft() {
-    if (activeIndex > 0) {
-      activeIndex--;
-      updateActive();
-    }
+
+  if(!isInt(inTape[inHead])){
+    throw 'Taśma wejściowa przyjmuje tylko liczby całkowite.';
   }
-  
-  function moveRight() {
-    if (activeIndex < cells.length - 1) {
-      activeIndex++;
-      updateActive();
-    }
-  }
-  
-  function moveHome() {
-    activeIndex = 0;
-    updateActive();
-  }
-  
-  document.querySelector('[data-act="left"]').addEventListener('click', moveLeft);
-  document.querySelector('[data-act="right"]').addEventListener('click', moveRight);
-  document.querySelector('[data-act="home"]').addEventListener('click', moveHome);
-  
-  updateActive();
+
+  mem.set(address, +inTape[inHead]);
+
+  inHead++;
+
+  if(inHead >= inView + 12)
+    inView = inHead;
+
+  renderTape('in');
+}
+
+renderTape('in');
