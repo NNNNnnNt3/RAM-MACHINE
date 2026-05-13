@@ -141,6 +141,18 @@ document
           inView++;
 
         renderTape('in');
+      } else {
+
+        if(act === 'home')
+          outView = 0;
+
+        if(act === 'left')
+          outView = Math.max(0, outView - 1);
+
+        if(act === 'right')
+          outView++;
+
+        renderTape('out');
       }
     })
   );
