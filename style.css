@@ -1,30 +1,36 @@
 
-html { height: 100%; }
 body {
   width: 2000px;
   height: 1500px;
-  margin: 0;
-  position: relative; 
-  overflow: hidden;   
-  background: #ffffff;
 }
-
+#background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
 #piec {
   position: absolute;
-
+  width: 100%;
+  height: 100%;
 }
 #conveyor {
   position: absolute;
+    width: 100%;
+  height: 100%;
 }
 
 #memory {
   position: absolute;
-
+  width: 100%;
+  height: 100%;
 }
 
 #gora {
   position: absolute;
-
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -35,3 +41,33 @@ body {
 }
 
 
+#dol {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:72%
+}
+#pizzorator {
+  position: absolute;
+  left: 15%;
+  top: 50%;
+  font-size: 30px;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  background-color: black;
+  width: 500px;
+  height: 500px;
+}
+.panelmemory {
+  position: absolute;
+  left: 75%;
+  color: white;
+  top: 30%;
+}
+
+.panelprocessor {
+  position: absolute;
+  left: 20%;
+  color: white;
+  top: 55%;
+}
