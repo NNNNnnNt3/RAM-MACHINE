@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Symulator Maszyny RAM</title>
+    <style>
+        :root {
+            --bg: #f0f2f5;
+            --primary: #2563eb;
+            --accent: #f59e0b;
+        }
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); padding: 20px; }
+        .grid { display: flex; gap: 20px; align-items: flex-start; }
+        
+        /* Edytor i Program */
+        .panel { background: white; border-radius: 8px; padding: 15px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        #program-list { min-width: 250px; }
+        .line { padding: 5px; border-bottom: 1px solid #eee; font-family: monospace; }
+        .line.active { background: #fef3c7; border-left: 4px solid var(--accent); font-weight: bold; }
+
+        /* Hardware */
+        .hardware-container { flex-grow: 1; display: flex; flex-direction: column; gap: 20px; }
+        #processor { display: flex; gap: 15px; background: #1e293b; color: white; padding: 20px; border-radius: 8px; }
+        .acc-box { background: #ef4444; padding: 10px; border-radius: 4px; font-weight: bold; }
+
+        /* Pamięć */
+        #memory-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); 
+            gap: 10px; 
+        }
+        .cell { 
+            background: white; border: 1px solid #cbd5e1; padding: 10px; 
+            text-align: center; border-radius: 4px; position: relative;
+        }
+        .cell span { display: block; font-size: 1.2em; color: var(--primary); }
+        .cell-label { font-size: 0.7em; color: #64748b; }
+
+        /* Animacje */
+        .flying-data {
+            position: fixed; background: var(--accent); color: white;
+            padding: 5px 10px; border-radius: 20px; z-index: 1000;
+            pointer-events: none; transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+        button { 
+            padding: 10px 20px; background: var(--primary); color: white; 
+            border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;
+        }
+        button:disabled { background: #94a3b8; }
+    </style>
+</head>
+<body>
+
+    <h1>Symulator Maszyny RAM</h1>
+    
+    <div class="grid">
+        <div id="program-list" class="panel">
+            <h3>Kod Programu</h3>
+            <div id="lines-container"></div>
+            <button id="step-btn" onclick="executeStep()">Wykonaj Krok (F8)</button>
+            <button onclick="location.reload()" style="background:#64748b">Reset</button>
+        </div>
+
+        <div class="hardware-container">
+            <div id="processor" class="panel">
+                <div class="acc-box" id="cpu-acc">ACC: 0</div>
+                <div>Instrukcja: <span id="cpu-instr">-</span></div>
+                <div>Argument: <span id="cpu-arg">-</span></div>
+            </div>
+
+            <div id="memory-grid" class="panel">
+                <!-- Komórki pamięci zostaną dodane przez JS -->
+            </div>
+            
+            <div class="panel">
+                <strong>Taśma Wyjściowa:</strong>
+                <div id="output-tape">-</div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    // 1. Definicja programu (Możesz tu dopisać własne instrukcje)
+    const program = [
+        { op: 'READ', arg: 0 },   // Wczytaj liczbę (symulacja: wpisujemy 10)
+        { op: 'STORE', arg: 1 },  // Zapisz do komórki 1
+        { op: 'LOAD', arg: 5 },   // Załaduj stałą 5
+        { op: 'ADD', arg: 1 },    // Dodaj zawartość komórki 1
+        { op: 'WRITE', arg: 0 },  // Wypisz wynik
+        { op: 'HALT', arg: 0 }    // Koniec
+    ];
+
+    let state = {
+        pc: 0,
+        acc: 0,
+        memory: Array(12).fill(0),
+        output: []
+    };
+
+    // 2. Inicjalizacja widoku
+    function init() {
+        const linesCont = document.getElementById('lines-container');
+        program.forEach((p, i) => {
+            linesCont.innerHTML += `<div class="line" id="line-${i}">${i}: ${p.op} ${p.arg}</div>`;
+        });
+
+        const memGrid = document.getElementById('memory-grid');
+        state.memory.forEach((val, i) => {
+            memGrid.innerHTML += `
+                <div class="cell" id="cell-${i}">
+                    <div class="cell-label">M[${i}]</div>
+                    <span id="mem-val-${i}">${val}</span>
+                </div>`;
+        });
+    }
+
+    // 3. Funkcja animacji "latającej paczki"
+    async function animate(fromId, toId, value) {
+        const fromEl = document.querySelector(fromId);
+        const toEl = document.querySelector(toId);
+        if(!fromEl || !toEl) return;
+
+        const start = fromEl.getBoundingClientRect();
+        const end = toEl.getBoundingClientRect();
+
+        const flyer = document.createElement('div');
+        flyer.className = 'flying-data';
+        flyer.innerText = value;
+        flyer.style.left = start.left + 'px';
+        flyer.style.top = start.top + 'px';
+        document.body.appendChild(flyer);
+
+        await new Promise(r => setTimeout(r, 50)); // Force render
+        flyer.style.left = end.left + 'px';
+        flyer.style.top = end.top + 'px';
+
+        await new Promise(r => setTimeout(r, 600));
+        flyer.remove();
+    }
+
+    // 4. Główna logika kroku
+    async function executeStep() {
+        if (state.pc >= program.length) return;
+
+        const btn = document.getElementById('step-btn');
+        btn.disabled = true;
+
+        const instr = program[state.pc];
+        
+        // Wizualizacja PC
+        document.querySelectorAll('.line').forEach(l => l.classList.remove('active'));
+        document.getElementById(`line-${state.pc}`).classList.add('active');
+
+        // Wyświetlanie w procesorze
+        document.getElementById('cpu-instr').innerText = instr.op;
+        document.getElementById('cpu-arg').innerText = instr.arg;
+
+        switch(instr.op) {
+            case 'READ':
+                let val = prompt("Podaj liczbę na wejście:", "10");
+                state.acc = parseInt(val) || 0;
+                updateAccDisplay();
+                break;
+
+            case 'LOAD':
+                state.acc = instr.arg; // LOAD natychmiastowy dla uproszczenia
+                await animate(`#line-${state.pc}`, '#cpu-acc', state.acc);
+                updateAccDisplay();
+                break;
+
+            case 'STORE':
+                state.memory[instr.arg] = state.acc;
+                await animate('#cpu-acc', `#cell-${instr.arg}`, state.acc);
+                document.getElementById(`mem-val-${instr.arg}`).innerText = state.acc;
+                break;
+
+            case 'ADD':
+                let addVal = state.memory[instr.arg];
+                await animate(`#cell-${instr.arg}`, '#cpu-acc', `+${addVal}`);
+                state.acc += addVal;
+                updateAccDisplay();
+                break;
+
+            case 'WRITE':
+                state.output.push(state.acc);
+                await animate('#cpu-acc', '#output-tape', state.acc);
+                document.getElementById('output-tape').innerText = state.output.join(', ');
+                break;
+
+            case 'HALT':
+                alert("Program zatrzymany!");
+                btn.disabled = true;
+                return;
+        }
+
+        state.pc++;
+        btn.disabled = false;
+    }
+
+    function updateAccDisplay() {
+        document.getElementById('cpu-acc').innerText = `ACC: ${state.acc}`;
+    }
+
+    init();
+</script>
+</body>
+</html>

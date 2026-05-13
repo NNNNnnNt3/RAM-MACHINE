@@ -1,0 +1,21 @@
+.ram-wrapper { display: flex; gap: 20px; font-family: monospace; }
+#program-view { border: 1px solid #ccc; padding: 10px; width: 200px; }
+.line { padding: 2px; }
+.line.active { background: #ffffdd; border-left: 3px solid orange; }
+
+#memory-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px; }
+.cell { border: 1px solid #444; padding: 10px; text-align: center; position: relative; }
+.cell.highlight { background: #e1f5fe; transition: 0.3s; }
+
+.flying-data {
+    position: fixed;
+    background: orange;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    z-index: 1000;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    pointer-events: none;
+}
+
+.accumulator { border: 2px solid red; font-weight: bold; }
