@@ -3,7 +3,7 @@
 <br>
 Proszę o ponowne ocenienie podziału pracy
 <br>
-
+<br><br><br><br><br>
 
 LINK do strony: https://nnnnnnnt3.github.io/RAM-MACHINE/ <br><br>
 
