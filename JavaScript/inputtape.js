@@ -54,7 +54,7 @@ function renderTape(which){
         ? `<input
               data-tapein="${i}"
               value="${arr[i] ?? ''}"
-           >`
+           ><hr>`
 
         : `<b style="line-height:44px">
               ${arr[i] ?? ''}
