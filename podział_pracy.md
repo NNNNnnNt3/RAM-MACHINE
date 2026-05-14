@@ -21,7 +21,7 @@ _***Dokładniejszy wykaz pracy:***_
 ***Jula Stadler (Jula :P/Sasamii-byte):***<br>
 - wykonanie oprawy wizualnej projektu,<br>
 - przygotowanie ilustracji oraz elementów graficznych,<br>
-- stworzenie pełnego stylowania aplikacji w CSS,br>
+- stworzenie pełnego stylowania aplikacji w CSS,<br>
 - zaprojektowanie wyglądu pamięci, procesora i paneli sterowania,<br>
 - dbanie o spójność wizualną całego projektu,<br>
 - testowanie poprawności działania aplikacji,<br>
