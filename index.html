@@ -3,8 +3,8 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="style.css">
   <title>Pizzeria RAM Machine</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <main>
@@ -14,15 +14,20 @@
   <img src="stoliki%20gora.png" id="gora">
    <img src="memo.png" id="memory">
     <img src="stoliki%20gora.png" id="dol">
-    <div id="pizzorator"><p>Pizzorator 3000 (Funkcje)</p></div>
+    <div id="pizzorator"> pizzorator 300 (Funkcje)
+      placeholder, jeszcze nie zrobione
+    </div>
   <div class="app">
     <div class="toolbar">
+
       <button class="btn green" id="run">▶</button>
       <button class="btn" id="step">⏭</button>
       <button class="btn red" id="stop">■</button>
       <button class="btn" id="reset">↻</button>
+      
       <button class="btn" id="addRow">+ row</button>
       <button class="btn" id="sample">Example: sum</button>
+
     </div>
     
     <div class="tape inputTape tape" id="inputTape">
@@ -33,7 +38,7 @@
         <div class="tapeTitle">Taśma wejściowa</div>
       </div>
 
-      <div class="tapeCells"></div>
+      <div class="tapeCells"> <hr></div>
 
       <button class="btn small" data-tape="in" data-act="right">▶</button>
       <div class="head"></div>
@@ -48,21 +53,12 @@
           <h3>Processor</h3>
 
           <div class="row">
-            <b>Instruction:</b>
-            <select name="instruction">
-              <option>READ</option>
-              <option>LOAD</option>
-              <option>STORE</option>
-              <option>ADD</option>
-              <option>WRITE</option>
-              <option>HALT</option>
-            </select>
+            <b>Instruction:</b><br>
             <div class="display" id="pInstr"></div>
           </div>
 
           <div class="row">
-            <b>Argument:</b>
-            <input type="text" name="argument" id="argument">
+            <b>Argument:</b><br>
             <div class="display" id="pArg"></div>
           </div>
 
@@ -92,7 +88,7 @@
         </div>
       </div>
       
-      <div class="panel program">
+      <div class="panelprogram">
         <h3>Program</h3>
         <div class="progWrap">
           <table class="progTable">
@@ -114,10 +110,11 @@
       </div>
     </div>
 
-    <div class="tape outputTape tape" id="outputTape">
+    <div class="tape outputTape tape" id="outputTape" style="position: absolute;left: 50%;top: 1500px;">
       <div>
         <button class="btn small" data-tape="out" data-act="home">|◀</button> 
         <button class="btn small" data-tape="out" data-act="left">◀</button>
+        
         <div class="tapeTitle">Output tape</div>
       </div>
 
@@ -125,7 +122,6 @@
       <button class="btn small" data-tape="out" data-act="right">▶</button>
       <div class="head"></div>
     </div>
-  </div>
   </div>
 
   <div class="modal" id="modal">
@@ -137,5 +133,11 @@
     </div>
   </div>
   </main>
+  <script>
+    let outTape = [];
+    let outHead = 0;
+    let outView = 0;
+  </script>
+  
   <script src="JavaScript/inputtape.js"></script>
 </body></html>
