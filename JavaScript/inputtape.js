@@ -2,6 +2,10 @@ let inTape = [];
 let inHead = 0;
 let inView = 0;
 
+let outTape = [];
+let outHead = 0;
+let outView = 0;
+
 const $ = s => document.querySelector(s);
 
 function isInt(s){
@@ -180,4 +184,15 @@ function READ(address){
   renderTape('in');
 }
 
+function WRITE(value){
+  outTape[outHead] = value;
+  outHead++;
+
+  if(outHead >= outView + 12)
+    outView = outHead;
+
+  renderTape('out');
+}
+
 renderTape('in');
+renderTape('out');
