@@ -31,6 +31,12 @@ Więc poddaj się lub do walki stań!<br>
 Meow! To fakt!_"<br><br><br>
 
  Panie Tadeuszu prosimy zlitować się nad nami 🙏
-
+<br><br>
 
 Działamy w systemie: "I'm a Survivor" Reba McEntire 🎵
+<br><br><br>
+
+„Starasz się jak ja, by noc była cicha,<br>
+Budzisz się i znika czar.<br>
+Co przyniesie dzień i na wiele pytań,<br>
+Odpowiedzi nie szukaj sam...”🎵🎵🎵🎵
