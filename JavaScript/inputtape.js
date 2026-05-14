@@ -38,7 +38,7 @@ function renderTape(which){
 
   cells.innerHTML = '';
 
-  for(let i=view; i<view+12; i++){
+  for(let i=view; i<view+5; i++){
 
     let div = document.createElement('div');
 
@@ -178,7 +178,7 @@ function READ(address){
 
   inHead++;
 
-  if(inHead >= inView + 12)
+  if(inHead >= inView + 5)
     inView = inHead;
 
   renderTape('in');
@@ -188,7 +188,7 @@ function WRITE(value){
   outTape[outHead] = value;
   outHead++;
 
-  if(outHead >= outView + 12)
+  if(outHead >= outView + 5)
     outView = outHead;
 
   renderTape('out');
