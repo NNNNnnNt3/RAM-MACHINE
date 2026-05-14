@@ -53,12 +53,21 @@
           <h3>Processor</h3>
 
           <div class="row">
-            <b>Instruction:</b><br>
+            <b>Instruction:</b>
+            <select name="instruction">
+              <option>READ</option>
+              <option>LOAD</option>
+              <option>STORE</option>
+              <option>ADD</option>
+              <option>WRITE</option>
+              <option>HALT</option>
+            </select>
             <div class="display" id="pInstr"></div>
           </div>
 
           <div class="row">
-            <b>Argument:</b><br>
+            <b>Argument:</b>
+            <input type="text" name="argument" id="argument">
             <div class="display" id="pArg"></div>
           </div>
 
