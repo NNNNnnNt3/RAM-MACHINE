@@ -1,3 +1,4 @@
+*{font-family: myFont;}
 body {
   max-width: 100%;
   height: 100%;
@@ -13,53 +14,64 @@ main{
   width: 100%;
   height: 100%;
   z-index: -1;
+    pointer-events: none;
 }
 #piec {
   position: absolute;
   width: 100%;
   height: 100%;
+    pointer-events: none;
 }
 #conveyor {
   position: absolute;
     width: 100%;
   height: 100%;
+    pointer-events: none;
+  
 }
 
 #memory {
   position: absolute;
   width: 100%;
   height: 100%;
+    pointer-events: none;
 }
 
 #gora {
   position: absolute;
   width: 100%;
   height: 100%;
+    pointer-events: none;
 }
+
+
 #inputtape{
   position: absolute;
   left: 50%;
   top: 250px;
+    pointer-events: none;
 }
+
+
 #dol {
   position: absolute;
   width: 100%;
   height: 100%;
-  top:72%
+  top:72%;
+    pointer-events: none;
 }
 #pizzorator {
   position: absolute;
-  left: 15%;
+  left: 7%;
   top: 50%;
   font-size: 30px;
   font-family: 'Arial', sans-serif;
   color: white;
   background-color: black;
   width: 500px;
-  height: 300px;
-}
-#pizzorator>p{
-  text-align: center;
+  height: 500px;
+    pointer-events: none;
+
 }
 .panelmemory {
   position: absolute;
@@ -70,7 +82,41 @@ main{
 
 .panelprocessor {
   position: absolute;
-  left: 20%;
+  left: 10%;
   color: white;
   top: 55%;
 }
+
+#inputTape{position: absolute;
+          background: whitesmoke;
+          border: 5px solid black;
+          top: 10%;
+          left: 3%;
+          width: 20%;
+        }
+.toolbar{width: 20%;
+  background-color: black;
+   left: 3%;
+   height: 5%;
+   top: 5%;
+   position: absolute;
+   border: black solid 5px;
+}
+button{ color: white;
+        background-color: black;
+        border-radius: 20%;
+        border: 1% white solid;
+      box-shadow: none;
+  text-shadow: none;
+  outline: none;
+appearance: none;}
+
+@font-face {
+  font-family: myFont; 
+  src: url(slkscr.ttf); 
+}
+
+.panelprogram{position: relative;
+  left: 50%;}
+  .modal{position: relative;
+  left: 50%;}
