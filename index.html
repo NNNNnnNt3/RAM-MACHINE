@@ -14,8 +14,7 @@
   <img src="stoliki%20gora.png" id="gora">
    <img src="memo.png" id="memory">
     <img src="stoliki%20gora.png" id="dol">
-    <div id="pizzorator">Pizzorator 300 (Funkcje)
-    </div>
+    
   <div class="app">
     <div class="toolbar">
 
@@ -46,31 +45,25 @@
     <div class="main">
 
       <div class="left">
-
-        <div class="panelprocessor">
-          <h3>Processor</h3>
-          <div class="row">
-            <b>Instruction:</b>
-            <select name="instruction">
-              <option>READ</option>
-              <option>LOAD</option>
-              <option>STORE</option>
-              <option>ADD</option>
-              <option>WRITE</option>
-              <option>HALT</option>
-            </select>
-            <div class="display" id="pInstr"></div>
+          <div id="pizzorator" class="panelprocessor">    
+            <h3>Processor</h3>
+            <div class="row">
+              <b>Instruction:</b>
+              <select name="instruction">
+                <option>READ</option>
+                <option>LOAD</option>
+                <option>STORE</option>
+                <option>ADD</option>
+                <option>WRITE</option>
+                <option>HALT</option>
+              </select>
+            </div>
+            <div class="row">
+              <b>Argument:</b><input type="text" name="argument" id="argument">
+              <button onlick="funkcjastart">Execute</button>
           </div>
-
-          <div class="row">
-            <b>Argument:</b>
-            <input type="text" name="argument" id="argument">
-            <div class="display" id="pArg"></div>
-          </div><br>
-          <button onlick="funkcjastart"></button>
-
-        </div>
-
+      </div>
+        
         <div class="panelmemory">
           <h3>Memory</h3>
             <div class="memBody"><table class="memTable">
