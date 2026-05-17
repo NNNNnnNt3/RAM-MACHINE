@@ -59,12 +59,12 @@ main{
   left: 3%;
   top: 50%;
   width: 350px;
-  height: 100px;
+  height: 150px;
   font-size: 20px;
   font-family: Arial, sans-serif;
   color: white;
   background-color: black;
-  pointer-events: none;
+  padding-left: 5px;
 }
 .row>b{
   font-size: 15px;
