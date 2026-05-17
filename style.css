@@ -56,16 +56,15 @@ main{
 }
 #pizzorator {
   position: absolute;
-  left: 7%;
+  left: 3%;
   top: 50%;
+  width: 500px;
+  height: 100px;
   font-size: 30px;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   color: white;
   background-color: black;
-  width: 500px;
-  height: 200px;
-    pointer-events: none;
-
+  pointer-events: none;
 }
 .panelmemory {
   position: absolute;
