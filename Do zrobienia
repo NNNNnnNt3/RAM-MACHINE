@@ -1,0 +1,8 @@
+Do zrobienia: (👉ﾟヮﾟ)👉
+1.	Jak wpisujemy cos na taśmie wejściowej to spawnuje się pizza z odpowiednim nr. Pizzy i numerem zamówienia*
+2.	Jak w procesorzecze dajemy funkcje load(chyba) to pizza jest wysyłana do pieca (akumulatora piec odpowiada 0)
+3.	Procesor może działać tylko gdy pizza jest w piecyku (i w tedy działa tylko na niej)
+4.	Gdy cos tam zatwierdzamy to pizza jest wysyłana do output tape (stoliczki na dole)
+5.	Wyświetla się wszystko odpowiednio w memory
+*numer pizzy - nr na taśmie wejściowej
+Numer zamuwienia - numer wpisany na taśmie
