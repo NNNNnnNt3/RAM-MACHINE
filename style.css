@@ -58,13 +58,16 @@ main{
   position: absolute;
   left: 3%;
   top: 50%;
-  width: 500px;
+  width: 350px;
   height: 100px;
-  font-size: 30px;
+  font-size: 20px;
   font-family: Arial, sans-serif;
   color: white;
   background-color: black;
   pointer-events: none;
+}
+.row>b{
+  font-size: 15px;
 }
 .panelmemory {
   position: absolute;
